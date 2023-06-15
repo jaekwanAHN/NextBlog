@@ -1,3 +1,6 @@
+import Header from '@/app/components/header';
+import Head from '@/app/head';
+
 export default function RootLayout({
   children,
 }: {
@@ -5,10 +8,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <head>
-        <title>title test</title>
-      </head>
-      <body>{children}</body>
+      <Head />
+      <body>
+        <Header />
+        <aside>this is side bar</aside>
+        {children}
+        <footer>I'm footer</footer>
+      </body>
     </html>
   );
 }
