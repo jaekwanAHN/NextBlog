@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@notionhq/client": "^1.0.1",
     "@types/node": "20.2.5",
     "@types/react": "18.2.7",
@@ -23,6 +25,6 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.2"
+    "@emotion/babel-plugin": "^11.11.0"
   }
 }
