@@ -1,5 +1,8 @@
 import Header from '@/app/components/header';
-import Head from '@/app/head';
+import Sidebar from '@/app/components/sidebar';
+import Footer from '@/app/footer';
+import '@/style/reset.css';
+import '@/style/globals.css';
 
 export default function RootLayout({
   children,
@@ -8,12 +11,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <Head />
+      <head>
+        <title>Blog Title</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body>
         <Header />
-        <aside>this is side bar</aside>
-        {children}
-        <footer>I'm footer</footer>
+        <div className="main-content">
+          <Sidebar />
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
