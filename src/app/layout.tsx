@@ -1,7 +1,6 @@
 import Header from '@/app/components/header';
 import Sidebar from '@/app/components/sidebar';
 import Footer from '@/app/footer';
-import '@/style/reset.css';
 import '@/style/globals.css';
 
 export default function RootLayout({
