@@ -3,11 +3,15 @@
 import axios from 'axios';
 import { useState } from 'react';
 
-export const PostPage = () => {
+interface PostPageProps {
+  params: { postId: string };
+}
+
+export const PostPage = ({ params }: PostPageProps) => {
   const [tempState, setTempState] = useState('noting in here');
   const fetch = () => {
     axios
-      .get('https://jsonplaceholder.typicode.com/todos/1')
+      .get(`https://jsonplaceholder.typicode.com/todos/${params.postId}`)
       .then((res) => setTempState(res.data.title));
   };
 
